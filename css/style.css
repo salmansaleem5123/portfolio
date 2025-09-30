@@ -48,19 +48,19 @@
   color: #0a0a0a !important; /* dark text on teal background */
   box-shadow: 0 0 10px #14F1C9; /* subtle neon glow */
 }
-/* Timeline Section Titles */
+/* Make timeline section titles big, bold, and neon */
 .timeline-left .period {
-  color: #FF4ECD !important;       /* Pink */
-  font-weight: 900;                /* Extra bold */
-  font-size: 1.8rem;               /* Much bigger */
-  letter-spacing: 1.2px;           /* Wider spacing for emphasis */
-  text-transform: uppercase;       /* All caps for divider look */
-  margin-bottom: 8px;
-  display: inline-block;
+  color: #FF4ECD !important;      /* Pink */
+  font-weight: 900 !important;    /* Extra bold */
+  font-size: 1.8rem !important;   /* Larger size */
+  letter-spacing: 1.2px !important;
+  text-transform: uppercase !important;
+  margin-bottom: 10px !important;
+  display: block !important;
 
-  /* Neon glow effect */
+  /* Neon glow */
   text-shadow: 
     0 0 6px #FF4ECD, 
     0 0 12px #FF4ECD, 
-    0 0 22px rgba(255, 78, 205, 0.9);
+    0 0 22px rgba(255, 78, 205, 0.9) !important;
 }
