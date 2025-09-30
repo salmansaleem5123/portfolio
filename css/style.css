@@ -16,6 +16,12 @@
 @media (max-width: 576px){  /* phones */
   .hero-image .hero-headshot{ max-width: 300px; }
 }
-.skills-row a {
-  margin: 0.25rem 0.4rem;
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
 }
+.skills-row .btn {
+  margin: .25rem 0;
+}
+
