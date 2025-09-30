@@ -48,3 +48,16 @@
   color: #0a0a0a !important; /* dark text on teal background */
   box-shadow: 0 0 10px #14F1C9; /* subtle neon glow */
 }
+/* Make timeline section titles bigger and bolder */
+.timeline-left .period {
+  color: #FF4ECD !important;  /* pink */
+  font-weight: 700;
+  font-size: 1.2rem;          /* increase size */
+  letter-spacing: 0.5px;      /* a bit more spacing */
+  text-transform: uppercase;  /* optional: makes it stand out */
+}
+
+/* Optional: add glow effect */
+.timeline-left .period {
+  text-shadow: 0 0 6px #FF4ECD, 0 0 12px #FF4ECD;
+}
