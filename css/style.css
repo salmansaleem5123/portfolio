@@ -29,3 +29,22 @@
 .timeline {
   margin-bottom: 60px;  /* adjust 60 → bigger/smaller if needed */
 }
+/* Pink titles */
+.timeline-left .period {
+  color: #FF4ECD !important; /* Pink */
+  font-weight: 600;
+}
+
+/* Teal skill boxes */
+.btn-outline-primary,
+.btn-outline-success {
+  color: #14F1C9 !important;
+  border-color: #14F1C9 !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-success:hover {
+  background-color: #14F1C9 !important;
+  color: #0a0a0a !important; /* dark text on teal background */
+  box-shadow: 0 0 10px #14F1C9; /* subtle neon glow */
+}
