@@ -52,9 +52,9 @@
 .timeline-left .period {
   color: #FF4ECD !important;      /* Pink */
   font-weight: 600 !important;    /* Semi-bold, not extra bold */
-  font-size: 1.6rem !important;   /* Large enough, but not shouting */
+  font-size: 1.2rem !important;   /* Large enough, but not shouting */
   letter-spacing: 1px !important;
-  text-transform: uppercase !important;
+  /*text-transform: uppercase !important;*/
   margin-bottom: 10px !important;
   display: block !important;
 }
