@@ -916,35 +916,44 @@ Architecture, Network Security</p>
             <div class="contact-form card" data-aos="fade-up" data-aos-delay="300">
               <div class="card-body p-4 p-lg-5">
 
-                <form action="forms/contact.php" method="post" class="php-email-form">
+                <!-- ✅ New Formspree Form -->
+                <form id="contact-form" action="https://formspree.io/f/mwpronde" method="POST" novalidate>
                   <div class="row gy-4">
-
+            
                     <div class="col-12">
-                      <input type="text" name="name" class="form-control text-color-custom-dark" placeholder="Your Name" required="">
+                      <input type="text" name="name" class="form-control text-color-custom-dark" placeholder="Your Name" required>
                     </div>
-
-                    <div class="col-12 ">
-                      <input type="email" class="form-control text-color-custom-dark" name="email" placeholder="Your Email" required="">
-                    </div>
-
+            
                     <div class="col-12">
-                      <input type="text" class="form-control text-color-custom-dark" name="subject" placeholder="Subject" required="">
+                      <input type="email" name="email" class="form-control text-color-custom-dark" placeholder="Your Email" required>
                     </div>
-
+            
                     <div class="col-12">
-                      <textarea class="form-control text-color-custom-dark" name="message" rows="6" placeholder="Message" required=""></textarea>
+                      <input type="text" name="subject" class="form-control text-color-custom-dark" placeholder="Subject">
                     </div>
-
+            
+                    <div class="col-12">
+                      <textarea name="message" rows="6" class="form-control text-color-custom-dark" placeholder="Message" required></textarea>
+                    </div>
+            
+                    <!-- Honeypot (spam trap) -->
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+            
+                    <!-- Optional hidden fields -->
+                    <input type="hidden" name="_subject" value="New message from your portfolio">
+                    <input type="hidden" name="_template" value="table">
+            
                     <div class="col-12 text-center">
-                      <div class="loading">Loading</div>
-                      <div class="error-message"></div>
-                      <div class="sent-message">Your message has been sent. Thank you!</div>
-
+                      <p id="form-status" role="status" aria-live="polite" class="mb-3"></p>
                       <button type="submit" class="btn btn-submit w-100">Submit Message</button>
+                      <div class="mt-2">
+                        <a class="btn btn-outline" href="mailto:salmansaleem5123@gmail.com?subject=Portfolio Inquiry">Or email me directly</a>
+                      </div>
                     </div>
-
+            
                   </div>
                 </form>
+                <!-- ✅ End New Form -->
 
               </div>
             </div>
@@ -1045,6 +1054,42 @@ Architecture, Network Security</p>
   
 </script>
 
-</body>
+<!-- ✅ New javascript Formspree handler script -->
+    <script>
+      (() => {
+        const form = document.getElementById('contact-form');
+        const statusEl = document.getElementById('form-status');
+        if (!form) return;
 
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          statusEl.textContent = 'Sending…';
+
+          try {
+            const res = await fetch(form.action, {
+              method: 'POST',
+              body: new FormData(form),
+              headers: { 'Accept': 'application/json' }
+            });
+
+            if (res.ok) {
+              form.reset();
+              statusEl.textContent = 'Thanks! I’ll get back to you shortly.';
+              statusEl.style.color = 'var(--accent-color)';
+            } else {
+              const err = await res.json().catch(() => null);
+              statusEl.textContent =
+                (err && err.errors && err.errors[0] && err.errors[0].message) ||
+                'Something went wrong. Please try again or email me directly.';
+              statusEl.style.color = '#d9534f';
+            }
+          } catch (err) {
+            statusEl.textContent = 'Network error. Please try again or email me directly.';
+            statusEl.style.color = '#d9534f';
+          }
+        });
+      })();
+    </script>
+
+</body>
 </html>
