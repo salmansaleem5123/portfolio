@@ -25,3 +25,7 @@
   margin: .25rem 0;
 }
 
+/* Add spacing after Skills timeline */
+.timeline {
+  margin-bottom: 60px;  /* adjust 60 → bigger/smaller if needed */
+}
