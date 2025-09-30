@@ -1,7 +1,7 @@
 /* Hero headshot: keep it perfectly round & responsive */
 .hero-image .hero-headshot{
   width: 100%;
-  max-width: 420px;        /* was 360px — bigger on desktop */
+  max-width: 550px;        /* much bigger on desktop */
   aspect-ratio: 1 / 1;
   height: auto;
   object-fit: cover;
@@ -11,8 +11,8 @@
 
 /* Tweak sizes by screen */
 @media (max-width: 992px){  /* tablets */
-  .hero-image .hero-headshot{ max-width: 340px; }  /* was 300px */
+  .hero-image .hero-headshot{ max-width: 400px; }
 }
 @media (max-width: 576px){  /* phones */
-  .hero-image .hero-headshot{ max-width: 260px; }  /* was 220px */
+  .hero-image .hero-headshot{ max-width: 300px; }
 }
