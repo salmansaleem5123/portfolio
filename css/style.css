@@ -48,19 +48,13 @@
   color: #0a0a0a !important; /* dark text on teal background */
   box-shadow: 0 0 10px #14F1C9; /* subtle neon glow */
 }
-/* Make timeline section titles big, bold, and neon */
+/* Timeline Section Titles - Clean & Professional */
 .timeline-left .period {
   color: #FF4ECD !important;      /* Pink */
-  font-weight: 900 !important;    /* Extra bold */
-  font-size: 1.8rem !important;   /* Larger size */
-  letter-spacing: 1.2px !important;
+  font-weight: 600 !important;    /* Semi-bold, not extra bold */
+  font-size: 1.6rem !important;   /* Large enough, but not shouting */
+  letter-spacing: 1px !important;
   text-transform: uppercase !important;
   margin-bottom: 10px !important;
   display: block !important;
-
-  /* Neon glow */
-  text-shadow: 
-    0 0 6px #FF4ECD, 
-    0 0 12px #FF4ECD, 
-    0 0 22px rgba(255, 78, 205, 0.9) !important;
 }
