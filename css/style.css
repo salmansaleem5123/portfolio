@@ -58,3 +58,7 @@
   margin-bottom: 10px !important;
   display: block !important;
 }
+#form-status {
+  min-height: 1.25rem;
+  font-size: .95rem;
+}
