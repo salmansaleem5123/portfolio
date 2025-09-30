@@ -1054,42 +1054,6 @@ Architecture, Network Security</p>
   
 </script>
 
-<!-- ✅ New javascript Formspree handler script -->
-    <script>
-      (() => {
-        const form = document.getElementById('contact-form');
-        const statusEl = document.getElementById('form-status');
-        if (!form) return;
-
-        form.addEventListener('submit', async (e) => {
-          e.preventDefault();
-          statusEl.textContent = 'Sending…';
-
-          try {
-            const res = await fetch(form.action, {
-              method: 'POST',
-              body: new FormData(form),
-              headers: { 'Accept': 'application/json' }
-            });
-
-            if (res.ok) {
-              form.reset();
-              statusEl.textContent = 'Thanks! I’ll get back to you shortly.';
-              statusEl.style.color = 'var(--accent-color)';
-            } else {
-              const err = await res.json().catch(() => null);
-              statusEl.textContent =
-                (err && err.errors && err.errors[0] && err.errors[0].message) ||
-                'Something went wrong. Please try again or email me directly.';
-              statusEl.style.color = '#d9534f';
-            }
-          } catch (err) {
-            statusEl.textContent = 'Network error. Please try again or email me directly.';
-            statusEl.style.color = '#d9534f';
-          }
-        });
-      })();
-    </script>
 
 </body>
 </html>
