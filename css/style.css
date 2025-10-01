@@ -34,6 +34,16 @@
   color: #FF4ECD !important; /* Pink */
   font-weight: 600;
 }
+.service-item {
+  border-radius: 12px;
+  background: var(--bs-body-bg); /* matches site background */
+}
+.service-item h3 {
+  margin-top: 0;
+}
+.service-item p {
+  margin-bottom: 0;
+}
 
 /* Teal skill boxes */
 .btn-outline-primary,
