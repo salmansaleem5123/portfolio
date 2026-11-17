@@ -13,7 +13,7 @@ Plain HTML, CSS and JavaScript. No build step and no framework.
 | `assets/js/site.js` | Mobile menu, section highlighting, contact form, certificate lightbox |
 | `assets/img/site/` | Photos, badges, favicon, link-preview image |
 | `assets/img/certs/` | Certificate images |
-| `assets/Salman-Saleem-Resume.pdf` | Résumé linked from the site |
+| `assets/Salman-Saleem-Resume.pdf` | Resume linked from the site |
 
 The contact form posts to Formspree.
 
